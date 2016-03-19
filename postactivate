@@ -1,0 +1,3 @@
+pip install --upgrade pip
+proj_name=$(basename $VIRTUAL_ENV)
+cd /local/$proj_name

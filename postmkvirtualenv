@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+pip install -U pip
+pip install pyopenssl ndg-httpsclient pyasn1
+
+proj_name=$(basename $VIRTUAL_ENV)
+
+if [ ! -d /local/$proj_name ]; then
+  mkdir /local/$proj_name
+fi
+
+cd /local/$proj_name
