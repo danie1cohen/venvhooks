@@ -9,3 +9,6 @@ if [ ! -d /local/$proj_name ]; then
 fi
 
 cd /local/$proj_name
+
+# Create a .env file at the base of the new virtualenv
+echo "source $WORKON_HOME/$proj_name/bin/activate" > .env
