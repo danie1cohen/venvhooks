@@ -1,3 +1,8 @@
+#!/bin/bash
+# This hook is run after a new project is activated.
+
 pip install --upgrade pip
-proj_name=$(basename $VIRTUAL_ENV)
-cd /local/$proj_name
+
+project_name=$(basename $VIRTUAL_ENV)
+
+cd /local/$project_name
