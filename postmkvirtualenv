@@ -1,14 +1,6 @@
 #!/usr/bin/env bash
-pip install -U pip
-#pip install pyopenssl ndg-httpsclient pyasn1
+pip install --upgrade pip
 
-project_name=$(basename $VIRTUAL_ENV)
-
-if [ ! -d /local/$project_name ]; then
-  mkdir /local/$project_name
+if [ -f requirements.txt ]; then
+  pip install -r requirements.txt
 fi
-
-cd /local/$project_name
-
-# Create a .env file at the base of the new virtualenv
-echo "source $WORKON_HOME/$project_name/bin/activate" > .env
