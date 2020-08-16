@@ -2,3 +2,8 @@
 # This hook is run after a new project is activated.
 
 pip install --upgrade pip
+
+if [ -f manage.py ]; then
+  alias manage="python manage.py"
+  alias test="manage test --noinput"
+fi
